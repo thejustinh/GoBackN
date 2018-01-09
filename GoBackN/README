@@ -1,0 +1,30 @@
+Name: Justin Herrera Lab: Noon
+
+Flags Used:
+- DATA_FLAG 3
+- RR 5
+-  SREJ 6
+-  EOF_FLAG 9
+-  EOF_ACK 10
+-  SEND_ARGS_FLAG 4
+
+RCOPY STATES
+- FILENAME 1
+- RECV_DATA 4
+- FILE_STATUS 3
+- DONE 10
+
+SERVER STATES
+- FILENAME 1
+- SEND_DATA 2
+- WINDOW_CLOSED 5
+- WAIT_FOR_EOF_ACK 6
+- RECV_ACK 7
+- DONE 10
+
+   The states that I used were similar to the states given by Professor Smith's
+implentation for a Stop and Wait file transfer. I also used his code as a basis
+to start the program but changed it up to work for my sliding window Go-Back-N
+implementation. 
+
+   For testing my program, the largest file size I used was a 500,000byte file. 
